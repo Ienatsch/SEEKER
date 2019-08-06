@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Abel|Notable&display=swap" rel="stylesheet">
+    <title>SEEKER | Restaurant Finder</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="title">SEEKER</h1>
+        <i class="fas fa-info"></i>
+        <span id="infoBox">
+            <p>SEEKER finds all restaurants in a given zip code that are available to RapidAPI</p>
+            <p class="center">Click on a restaurant to show map location</p>
+        </span>
+    </header>
+    <div id="dropdownMessage"></div>
+    <main>
+        <h2 class="center">Enter zip code to search</h2>
+        <div class="search center">
+            <input type="text" id="zipInput">
+            <button type="button" id="zipSubmit">Search</button>
+        </div>
+        <div class="gridContainer">
+            <div id="results">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Address</th>
+                            <th>Phone</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                    </tbody>
+                </table>
+            </div>
+            <div id="map"></div>
+        </div>
+    </main>
+    <modal id="loadingScreenModal">
+        <div id="modalContainer">
+            <h1>SEEKER</h1>
+            <h3>For when you need a bite</h3>
+            <div id="loadingBar">
+                <p>Finding Restaurants<span class="dot dot1">.</span><span class="dot dot2">.</span><span
+                        class="dot dot3">.</span></p>
+                <div class="loadLine"></div>
+            </div>
+        </div>
+    </modal>
+    <script type="text/javascript" src="app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKEQIeUQZ93iyzLEMpaiNtykptGqMYh-8&callback=initMap"
+        async defer></script>
+    <script src="https://kit.fontawesome.com/ffa66cb6ec.js"></script>
+</body>
+
+</html>
